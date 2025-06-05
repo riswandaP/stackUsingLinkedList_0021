@@ -41,3 +41,14 @@ class Stack
         return top == NULL; //Return true uf the top pointer is NULL, indicating an empty st
     }
     
+    //Pop operation : Remove the topmost element from the stack
+    void pop()
+    {
+        if (isEmpty())
+        {
+            cout << "Stack is empty." << endl;
+            return;
+        }
+        cout << "Popped value: " << top->data << endl;
+        top = top->next; //Update the top pointer to the next node
+    }
